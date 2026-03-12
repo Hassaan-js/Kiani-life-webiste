@@ -1,53 +1,57 @@
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import agent1 from "@/assets/agent-1.jpg";
+import agent2 from "@/assets/agent-2.jpg";
 
 const testimonials = [
   {
-    quote: "They took the time to explain every option and never pressured us. Found us a policy that saved $200/month compared to our old coverage.",
-    name: "Maria R.",
-    meta: "Life Insurance Client",
+    quote: "I was working retail making $14/hour. Three months into Kiani, I made $8,200 in a single month. I wish I'd found this sooner.",
+    name: "Jasmine R.",
+    meta: "Agent · 8 months",
+    badge: "Top Producer",
+    initials: "JR",
+    image: agent1,
+  },
+  {
+    quote: "The training is world-class. They don't just give you a script — they teach you how to actually help families. The money follows naturally.",
+    name: "Marcus T.",
+    meta: "Team Leader · 2 years",
+    badge: "6 Figures",
+    initials: "MT",
+    image: agent2,
+  },
+  {
+    quote: "I dropped out of college because I was already making more than my professors. No cap on earnings, real mentorship, and I set my own hours.",
+    name: "Dylan P.",
+    meta: "Agent · 14 months",
+    badge: "Rising Star",
+    initials: "DP",
+  },
+  {
+    quote: "As a single mom, flexibility was everything. I work while my kids are at school and earn more than my corporate job ever paid.",
+    name: "Aisha K.",
+    meta: "Agent · 11 months",
     badge: "Verified",
-    initials: "MR",
+    initials: "AK",
   },
   {
-    quote: "As a small business owner, finding the right health plan was overwhelming. Kiani simplified everything and got us enrolled in a week.",
-    name: "David K.",
-    meta: "Health Insurance Client",
+    quote: "I went from delivering pizzas to running a team of 6 agents in under two years. Kiani gave me the blueprint — I just followed it.",
+    name: "Carlos M.",
+    meta: "Team Leader · 22 months",
+    badge: "Leader",
+    initials: "CM",
+  },
+  {
+    quote: "The lead system is what sold me. No cold calling, no begging friends and family. Real leads, real appointments, real money.",
+    name: "Taylor S.",
+    meta: "Agent · 6 months",
     badge: "Verified",
-    initials: "DK",
-  },
-  {
-    quote: "The Medicare enrollment process was so confusing until I called Kiani. They compared plans side by side and helped me choose the best one.",
-    name: "Patricia H.",
-    meta: "Medicare Client",
-    badge: "Google Review",
-    initials: "PH",
-  },
-  {
-    quote: "I never thought I could afford life insurance. They found me a term policy for less than my streaming subscriptions. Incredible service.",
-    name: "James T.",
-    meta: "Life Insurance Client",
-    badge: "Verified",
-    initials: "JT",
-  },
-  {
-    quote: "The IUL strategy they designed for my retirement changed everything. Tax-free income and a death benefit — it's like having a safety net and a growth plan in one.",
-    name: "Sandra L.",
-    meta: "Retirement Planning Client",
-    badge: "Google Review",
-    initials: "SL",
-  },
-  {
-    quote: "Professional, knowledgeable, and genuinely caring. They follow up regularly to make sure our coverage still fits our needs. Rare to find.",
-    name: "Robert M.",
-    meta: "Multi-Policy Client",
-    badge: "Verified",
-    initials: "RM",
+    initials: "TS",
   },
 ];
 
 const Testimonials = () => (
-  <section id="testimonials" className="bg-ink py-24 sm:py-32">
+  <section id="testimonials" className="bg-deep py-24 sm:py-32">
     <div className="wrap">
       <motion.div
         className="mb-16"
@@ -56,15 +60,18 @@ const Testimonials = () => (
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <span className="eyebrow block mb-3.5">Client Stories</span>
-        <h2 className="d2 text-t1">Trusted by <span className="gold-italic">Florida Families</span></h2>
+        <span className="eyebrow block mb-3.5">Success Stories</span>
+        <h2 className="d2 text-t1">Real People, <span className="gold-italic">Real Results</span></h2>
+        <p className="text-base font-light text-t2 leading-relaxed max-w-[520px] mt-4">
+          Don't take our word for it. Hear from agents who started exactly where you are now.
+        </p>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[hsl(var(--border))]">
         {testimonials.map((t, i) => (
           <motion.div
             key={t.name}
-            className="bg-ink p-8 sm:p-10 flex flex-col transition-colors duration-350 hover:bg-panel"
+            className="bg-deep p-8 sm:p-10 flex flex-col transition-colors duration-350 hover:bg-panel"
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -79,9 +86,13 @@ const Testimonials = () => (
               &ldquo;{t.quote}&rdquo;
             </p>
             <div className="flex items-center gap-3.5 pt-5 border-t border-subtle">
-              <div className="w-[42px] h-[42px] border border-gold-line flex items-center justify-center font-serif text-base font-bold text-gold flex-shrink-0 bg-gold-lo">
-                {t.initials}
-              </div>
+              {t.image ? (
+                <img src={t.image} alt={t.name} className="w-[42px] h-[42px] object-cover border border-gold-line flex-shrink-0" />
+              ) : (
+                <div className="w-[42px] h-[42px] border border-gold-line flex items-center justify-center font-serif text-base font-bold text-gold flex-shrink-0 bg-gold-lo">
+                  {t.initials}
+                </div>
+              )}
               <div className="flex-1">
                 <span className="block text-sm font-semibold text-t1 mb-0.5">{t.name}</span>
                 <span className="text-[11px] text-t3 tracking-[0.04em]">{t.meta}</span>

@@ -4,28 +4,32 @@ import { Plus } from "lucide-react";
 
 const faqs = [
   {
-    q: "How much does it cost to use your services?",
-    a: "Our services are completely free to you. We're compensated by the insurance carriers we work with, so there's never a fee or hidden cost for our guidance.",
+    q: "Do I need experience to get started?",
+    a: "Not at all. Most of our top earners had zero sales or insurance experience before joining. We provide a complete training system that takes you from beginner to confident closer.",
   },
   {
-    q: "How do I know which plan is right for me?",
-    a: "We start with a free consultation to understand your needs, budget, and goals. Then we compare options across 15+ carriers to find the best fit — and walk you through everything before you decide.",
+    q: "How much does it cost to get started?",
+    a: "You'll need to get your state insurance license (study materials are provided). The licensing exam fee varies by state but is typically $50–$150. There are no franchise fees, desk fees, or startup costs with Kiani.",
   },
   {
-    q: "What's the difference between term and whole life insurance?",
-    a: "Term life covers you for a set period (10-30 years) at a lower cost. Whole life covers you for your entire life and builds cash value over time. We'll help you decide which makes sense for your situation.",
+    q: "Is this a W-2 job or 1099?",
+    a: "This is a 1099 independent contractor position. You're building your own business with the full support of our agency. That means you control your schedule, your income, and your growth.",
   },
   {
-    q: "Can you help me if I already have coverage?",
-    a: "Absolutely. We regularly review existing policies to make sure you're getting the best value. Many clients save money or get better coverage after a policy review.",
+    q: "What kind of leads do you provide?",
+    a: "We provide exclusive mortgage protection leads — homeowners who have recently purchased a home and need coverage. These are warm leads, not cold calls. You'll also learn to generate your own referral pipeline.",
   },
   {
-    q: "What areas do you serve?",
-    a: "We're based in Deltona, Florida and serve families across the entire state. Many of our services can be handled over the phone or via video call for your convenience.",
+    q: "How soon can I start earning?",
+    a: "Most agents close their first deal within the first 1–2 weeks of field work. Commissions are paid weekly via direct deposit. Many new agents earn their first $1,000+ within their first month.",
   },
   {
-    q: "How quickly can I get coverage?",
-    a: "Many plans can be activated within 24-48 hours. Some life insurance policies require a brief health questionnaire but we handle the paperwork to make it as fast as possible.",
+    q: "Can I do this part-time?",
+    a: "Yes, many agents start part-time while keeping their current job. However, our highest earners treat this as a full-time career. We'll work with your schedule either way.",
+  },
+  {
+    q: "What's the career path?",
+    a: "Agent → Senior Agent → Team Leader → Agency Owner. As you grow, you can recruit and train your own team, earning overrides on their production. Several of our leaders built six-figure agencies within 2 years.",
   },
 ];
 
@@ -33,7 +37,7 @@ const FAQ = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   return (
-    <section className="bg-panel py-24 sm:py-32">
+    <section id="faq" className="bg-panel py-24 sm:py-32">
       <div className="wrap">
         <div className="grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-16 lg:gap-24 items-start">
           <motion.div
@@ -43,15 +47,16 @@ const FAQ = () => {
             transition={{ duration: 0.5 }}
           >
             <span className="eyebrow block mb-3.5">FAQ</span>
-            <h2 className="d3 text-t1 mb-5">Common Questions, <span className="gold-italic">Clear Answers</span></h2>
+            <h2 className="d3 text-t1 mb-5">Got Questions? <span className="gold-italic">We've Got Answers</span></h2>
             <p className="text-[15px] font-light text-t2 leading-relaxed mb-9">
-              Insurance can feel complicated. We're here to simplify it. If you don't see your question below, give us a call — we're always happy to help.
+              We know you're evaluating your options. Here are the most common questions from people just like you who are considering a career with Kiani.
             </p>
             <a
-              href="tel:8442983473"
-              className="group relative inline-flex items-center gap-2.5 px-9 py-[15px] border border-subtle text-t2 text-[13px] font-semibold tracking-[0.08em] uppercase hover:border-gold-line hover:text-t1 transition-all"
+              href="#apply"
+              className="group relative inline-flex items-center gap-2.5 px-9 py-[15px] bg-gold text-primary-foreground text-[13px] font-semibold tracking-[0.08em] uppercase overflow-hidden"
             >
-              Call 844.298.3473
+              <span className="relative z-10">Still Curious? Book a Call</span>
+              <span className="absolute inset-0 bg-[hsl(var(--gold-hi))] -translate-x-full transition-transform duration-400 group-hover:translate-x-0" />
             </a>
           </motion.div>
 
@@ -60,24 +65,17 @@ const FAQ = () => {
               <div key={i} className="border-b border-subtle">
                 <button
                   onClick={() => setOpenIdx(openIdx === i ? null : i)}
-                  className="w-full flex items-center justify-between gap-5 py-5 text-left text-[15px] font-medium text-t2 transition-colors duration-300 hover:text-t1"
-                  style={{ color: openIdx === i ? 'hsl(var(--t1))' : undefined }}
+                  className="w-full flex items-center justify-between gap-5 py-5 text-left text-[15px] font-medium transition-colors duration-300 hover:text-t1"
+                  style={{ color: openIdx === i ? 'hsl(var(--t1))' : 'hsl(var(--t2))' }}
                 >
                   {faq.q}
-                  <div
-                    className={`w-[26px] h-[26px] border flex items-center justify-center flex-shrink-0 transition-all duration-400 ${
-                      openIdx === i ? "border-gold text-gold rotate-45" : "border-subtle text-t3"
-                    }`}
-                  >
+                  <div className={`w-[26px] h-[26px] border flex items-center justify-center flex-shrink-0 transition-all duration-400 ${openIdx === i ? "border-gold text-gold rotate-45" : "border-subtle text-t3"}`}>
                     <Plus className="w-4 h-4" />
                   </div>
                 </button>
                 <div
                   className="overflow-hidden transition-all duration-500"
-                  style={{
-                    maxHeight: openIdx === i ? "280px" : "0",
-                    transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
-                  }}
+                  style={{ maxHeight: openIdx === i ? "280px" : "0", transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }}
                 >
                   <p className="pb-5 text-sm font-light text-t2 leading-relaxed">{faq.a}</p>
                 </div>
