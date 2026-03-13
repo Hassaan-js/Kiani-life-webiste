@@ -31,13 +31,7 @@ const Navbar = () => {
       >
         <div className="flex items-center justify-between h-[76px] max-w-[1200px] mx-auto px-6 lg:px-12">
           <a href="#" className="flex items-center gap-3.5">
-            <div className="w-[38px] h-[38px] border border-gold flex items-center justify-center flex-shrink-0">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-gold">
-                <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                <path d="M2 17l10 5 10-5" />
-                <path d="M2 12l10 5 10-5" />
-              </svg>
-            </div>
+            <img src={logo} alt="Kiani Life and Health logo" className="w-[42px] h-[42px] object-contain flex-shrink-0" />
             <div>
               <span className="font-serif text-[15px] font-bold text-t1 tracking-[0.04em] block leading-tight">Kiani Life & Health</span>
               <span className="text-[10px] font-medium tracking-[0.18em] text-t3 uppercase block">Careers · Join the Team</span>
