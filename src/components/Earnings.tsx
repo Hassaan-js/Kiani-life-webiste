@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const tiers = [
-  { level: "New Agent", timeline: "Month 1–3", income: "$3K–$5K/mo", desc: "Learning the system, closing your first deals, building confidence.", color: "text-t2" },
-  { level: "Rising Agent", timeline: "Month 4–8", income: "$5K–$10K/mo", desc: "Consistent closings, refining your pitch, generating referrals.", color: "text-t1" },
-  { level: "Top Producer", timeline: "Month 9–18", income: "$10K–$15K+/mo", desc: "High-volume closer, building a personal brand, leadership track.", color: "text-gold" },
-  { level: "Team Leader", timeline: "Year 2+", income: "$15K–$30K+/mo", desc: "Running your own team, earning overrides, scaling your agency.", color: "text-gold-hi" },
+  { level: "New Agent", timeline: "Month 1–3", income: "$5K–$10K/mo", desc: "Learning the system, closing your first deals, building confidence.", color: "text-t2" },
+  { level: "Agent", timeline: "Month 3–6", income: "~$30K/mo", desc: "Consistent closings, refining your pitch, scaling production.", color: "text-t1" },
+  { level: "Top Producer", timeline: "Month 6+", income: "$30K–$100K/mo", desc: "High-volume closer, building a personal brand, leadership track.", color: "text-gold" },
+  { level: "Team Leader", timeline: "Year 1+", income: "$100K+/mo", desc: "Running your own team, earning overrides, scaling your agency.", color: "text-gold-hi" },
 ];
 
 const Earnings = () => (
@@ -27,12 +27,21 @@ const Earnings = () => (
             Our compensation structure rewards effort from day one. Weekly pay, fast advances, and production bonuses mean you don't wait months to see results.
           </p>
 
-          <div className="flex items-start gap-5 p-6 border border-subtle bg-panel mb-8">
+          <div className="flex items-start gap-5 p-6 border border-subtle bg-panel mb-4">
             <div className="text-[40px] font-serif font-bold text-gold leading-none">$</div>
             <div>
-              <div className="text-[15px] font-semibold text-t1 mb-1">Average first-year agent</div>
-              <div className="font-serif text-[28px] font-bold text-gold leading-none mb-2">$65,000 – $120,000</div>
+              <div className="text-[15px] font-semibold text-t1 mb-1">Average First Year Agent Potential</div>
+              <div className="font-serif text-[28px] font-bold text-gold leading-none mb-2">$90,000+</div>
               <div className="text-[11px] text-t3 leading-relaxed">*Based on full-time agents who completed training. Individual results vary.</div>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-5 p-6 border border-subtle bg-panel mb-8">
+            <div className="text-[40px] font-serif font-bold text-gold leading-none">↑</div>
+            <div>
+              <div className="text-[15px] font-semibold text-t1 mb-1">Annual Income Potential</div>
+              <div className="font-serif text-[28px] font-bold text-gold leading-none mb-2">$200,000 – $500,000+</div>
+              <div className="text-[11px] text-t3 leading-relaxed">*Top producers and team leaders. Results depend on effort and performance.</div>
             </div>
           </div>
 
@@ -56,7 +65,7 @@ const Earnings = () => (
             <div className="p-5 border-b border-subtle bg-[rgba(255,255,255,0.02)]">
               <span className="text-[10px] font-semibold tracking-[0.16em] uppercase text-gold">Income Growth Path</span>
             </div>
-            {tiers.map((tier, i) => (
+            {tiers.map((tier) => (
               <div key={tier.level} className="p-5 border-b border-[hsl(var(--input))] last:border-b-0 hover:bg-panel transition-colors">
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-serif text-[17px] font-bold text-t1">{tier.level}</span>

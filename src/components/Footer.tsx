@@ -1,4 +1,6 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Footer = () => (
   <footer className="bg-[#050608] pt-20 pb-9 border-t border-subtle">
@@ -6,13 +8,7 @@ const Footer = () => (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2.2fr_1fr_1fr_1fr] gap-10 lg:gap-14 pb-14 mb-9 border-b border-[hsl(var(--input))]">
         <div>
           <div className="flex items-center gap-3.5 mb-5">
-            <div className="w-[38px] h-[38px] border border-gold flex items-center justify-center flex-shrink-0">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-gold">
-                <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                <path d="M2 17l10 5 10-5" />
-                <path d="M2 12l10 5 10-5" />
-              </svg>
-            </div>
+            <img src={logo} alt="Kiani Life and Health logo" className="w-[38px] h-[38px] object-contain flex-shrink-0" />
             <div>
               <span className="font-serif text-[15px] font-bold text-t1 tracking-[0.04em] block leading-tight">Kiani Life & Health</span>
               <span className="text-[10px] font-medium tracking-[0.18em] text-t3 uppercase block">Careers & Recruiting</span>
@@ -37,27 +33,33 @@ const Footer = () => (
         <div>
           <h4 className="text-[10px] font-semibold tracking-[0.2em] uppercase text-t3 mb-5">Opportunity</h4>
           <ul className="flex flex-col gap-3">
-            {["Why Kiani", "Earning Potential", "How It Works", "Success Stories", "Book a Call"].map((l) => (
-              <li key={l}><a href="#" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">{l}</a></li>
-            ))}
+            <li><a href="/#why" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Why Kiani</a></li>
+            <li><a href="/#earnings" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Earning Potential</a></li>
+            <li><a href="/#process" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">How It Works</a></li>
+            <li><a href="/#testimonials" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Success Stories</a></li>
+            <li><a href="/#apply" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Book a Call</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-[10px] font-semibold tracking-[0.2em] uppercase text-t3 mb-5">Resources</h4>
+          <h4 className="text-[10px] font-semibold tracking-[0.2em] uppercase text-t3 mb-5">Learn More</h4>
           <ul className="flex flex-col gap-3">
-            {["Licensing Guide", "Training Overview", "Comp Plan", "FAQ", "Contact"].map((l) => (
-              <li key={l}><a href="#" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">{l}</a></li>
-            ))}
+            <li><Link to="/commissions" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Commissions</Link></li>
+            <li><Link to="/training" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Training System</Link></li>
+            <li><Link to="/leads" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Lead System</Link></li>
+            <li><Link to="/career-growth" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Career Path</Link></li>
+            <li><Link to="/bonuses" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Bonuses</Link></li>
           </ul>
         </div>
 
         <div>
           <h4 className="text-[10px] font-semibold tracking-[0.2em] uppercase text-t3 mb-5">Company</h4>
           <ul className="flex flex-col gap-3">
-            {["About Kiani", "Our Carriers", "Client Services", "Privacy Policy", "Terms"].map((l) => (
-              <li key={l}><a href="#" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">{l}</a></li>
-            ))}
+            <li><a href="/#team" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Meet the Team</a></li>
+            <li><Link to="/partners" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Partners</Link></li>
+            <li><a href="/#faq" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">FAQ</a></li>
+            <li><a href="#" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Privacy Policy</a></li>
+            <li><a href="#" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Terms</a></li>
           </ul>
         </div>
       </div>

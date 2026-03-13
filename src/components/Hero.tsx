@@ -1,9 +1,17 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, Calendar, Check } from "lucide-react";
 import heroImg from "@/assets/hero-team.jpg";
 
+const bullets = [
+  "No experience needed",
+  "Uncapped commissions",
+  "World-class training",
+  "Build your own team",
+  "Write your own paycheck",
+];
+
 const stats = [
-  { num: "$5K–$15K", label: "Monthly Potential" },
+  { num: "$15K–$60K+", label: "Monthly Potential" },
   { num: "100%", label: "Commission-Based" },
   { num: "15+", label: "Top Carriers" },
   { num: "0", label: "Experience Required" },
@@ -11,7 +19,6 @@ const stats = [
 
 const Hero = () => (
   <section className="min-h-screen flex items-center bg-ink relative overflow-hidden pt-[120px] pb-20">
-    {/* Background image overlay */}
     <div className="absolute inset-0">
       <img src={heroImg} alt="Kiani team" className="w-full h-full object-cover opacity-20" />
       <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--ink))] via-[hsl(var(--ink)/0.85)] to-[hsl(var(--ink)/0.6)]" />
@@ -31,13 +38,24 @@ const Hero = () => (
         </div>
 
         <h1 className="d1 text-t1 mb-6">
-          Your 9-to-5 Won't<br />
+          Your 9–5 Won't<br />
           <span className="gold-italic">Build Your Empire.</span>
         </h1>
 
-        <p className="text-lg font-light leading-relaxed text-t2 max-w-[560px] mb-10">
-          Join Kiani Life & Health and launch your career in insurance sales. No experience needed. Uncapped commissions. World-class training. Build your own team and write your own paycheck — starting now.
+        <p className="text-lg font-light leading-relaxed text-t2 max-w-[560px] mb-8">
+          Join Kiani Life & Health and launch your career in insurance sales.
         </p>
+
+        <div className="flex flex-col gap-2.5 mb-10">
+          {bullets.map((b) => (
+            <div key={b} className="flex items-center gap-3 text-[15px] text-t2 font-light">
+              <div className="w-5 h-5 border border-gold-line flex items-center justify-center flex-shrink-0 text-gold">
+                <Check className="w-3 h-3" />
+              </div>
+              {b}
+            </div>
+          ))}
+        </div>
 
         <div className="flex items-center gap-4 flex-wrap mb-16">
           <a
@@ -45,7 +63,7 @@ const Hero = () => (
             className="group relative inline-flex items-center gap-2.5 px-10 py-[18px] bg-gold text-primary-foreground text-[13px] font-semibold tracking-[0.08em] uppercase overflow-hidden"
           >
             <Calendar className="relative z-10 w-4 h-4" />
-            <span className="relative z-10">Book Your Discovery Call</span>
+            <span className="relative z-10">Book a Discovery Call with Moiz Kiani</span>
             <ArrowRight className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             <span className="absolute inset-0 bg-[hsl(var(--gold-hi))] -translate-x-full transition-transform duration-400 group-hover:translate-x-0" />
           </a>

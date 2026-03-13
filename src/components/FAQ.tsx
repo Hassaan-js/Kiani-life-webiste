@@ -17,11 +17,11 @@ const faqs = [
   },
   {
     q: "What kind of leads do you provide?",
-    a: "We provide exclusive mortgage protection leads — homeowners who have recently purchased a home and need coverage. These are warm leads, not cold calls. You'll also learn to generate your own referral pipeline.",
+    a: "We provide exclusive mortgage protection leads — homeowners who have recently purchased a home and need coverage. These are warm leads, not cold calls.",
   },
   {
     q: "How soon can I start earning?",
-    a: "Most agents close their first deal within the first 1–2 weeks of field work. Commissions are paid weekly via direct deposit. Many new agents earn their first $1,000+ within their first month.",
+    a: "Many new agents begin earning attractive paychecks within their first month. Commissions are paid weekly via direct deposit.",
   },
   {
     q: "Can I do this part-time?",
