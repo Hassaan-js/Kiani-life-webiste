@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const steps = [
-  { num: "01", title: "Book a Call", desc: "Schedule a quick 15-minute discovery call. We'll learn about your goals and see if you're a fit." },
-  { num: "02", title: "Get Licensed", desc: "We guide you through getting your insurance license — study materials, exam prep, and support included." },
-  { num: "03", title: "Complete Training", desc: "Our intensive training program teaches you scripts, objection handling, and real-world selling skills." },
-  { num: "04", title: "Start Earning", desc: "Hit the field with warm leads, a mentor by your side, and a clear path to your first commission check." },
+  { num: "01", title: "Book a Call", desc: "Schedule a quick 15-minute discovery call with Moiz Kiani. We'll learn about your goals and see if you're a fit.", href: "#apply" },
+  { num: "02", title: "Get Licensed", desc: "We guide you through getting your insurance license — study materials, exam prep, and support included.", href: "/training" },
+  { num: "03", title: "Start Earning", desc: "Hit the ground running with warm leads, a mentor by your side, and a clear path to your first commission check.", href: "/training#proof" },
 ];
 
 const Process = () => (
@@ -24,8 +25,8 @@ const Process = () => (
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-0 relative">
-        <div className="hidden lg:block absolute top-[43px] left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-[hsl(var(--border))] via-[hsl(var(--gold))] to-[hsl(var(--border))]" />
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 lg:gap-0 relative">
+        <div className="hidden sm:block absolute top-[43px] left-[16.5%] right-[16.5%] h-px bg-gradient-to-r from-[hsl(var(--border))] via-[hsl(var(--gold))] to-[hsl(var(--border))]" />
 
         {steps.map((s, i) => (
           <motion.div
@@ -40,7 +41,16 @@ const Process = () => (
               {s.num}
             </div>
             <h3 className="font-serif text-[17px] font-bold text-t1 mb-2.5">{s.title}</h3>
-            <p className="text-[13px] font-light text-t2 leading-relaxed">{s.desc}</p>
+            <p className="text-[13px] font-light text-t2 leading-relaxed mb-4">{s.desc}</p>
+            {s.href.startsWith("/") ? (
+              <Link to={s.href} className="inline-flex items-center gap-1.5 text-[12px] font-semibold tracking-[0.08em] text-gold uppercase hover:text-gold-hi transition-colors">
+                Learn More <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            ) : (
+              <a href={s.href} className="inline-flex items-center gap-1.5 text-[12px] font-semibold tracking-[0.08em] text-gold uppercase hover:text-gold-hi transition-colors">
+                Get Started <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+            )}
           </motion.div>
         ))}
       </div>
