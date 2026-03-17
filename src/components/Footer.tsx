@@ -33,10 +33,10 @@ const Footer = () => (
         <div>
           <h4 className="text-[10px] font-semibold tracking-[0.2em] uppercase text-t3 mb-5">Opportunity</h4>
           <ul className="flex flex-col gap-3">
-            <li><a href="/#why" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Why Kiani</a></li>
-            <li><a href="/#earnings" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Earning Potential</a></li>
-            <li><a href="/#process" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">How It Works</a></li>
-            <li><a href="/#testimonials" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Success Stories</a></li>
+            <li><Link to="/why-kiani" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Why Kiani</Link></li>
+            <li><Link to="/earnings" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Earning Potential</Link></li>
+            <li><Link to="/how-it-works" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">How It Works</Link></li>
+            <li><Link to="/success-stories" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Success Stories</Link></li>
             <li><a href="/#apply" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Book a Call</a></li>
           </ul>
         </div>

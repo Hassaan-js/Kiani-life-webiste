@@ -11,6 +11,10 @@ import CareerGrowthPage from "./pages/CareerGrowthPage.tsx";
 import LeadsPage from "./pages/LeadsPage.tsx";
 import BonusesPage from "./pages/BonusesPage.tsx";
 import PartnersPage from "./pages/PartnersPage.tsx";
+import WhyKianiPage from "./pages/WhyKianiPage.tsx";
+import EarningsPage from "./pages/EarningsPage.tsx";
+import ProcessPage from "./pages/ProcessPage.tsx";
+import TestimonialsPage from "./pages/TestimonialsPage.tsx";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +32,10 @@ const App = () => (
           <Route path="/leads" element={<LeadsPage />} />
           <Route path="/bonuses" element={<BonusesPage />} />
           <Route path="/partners" element={<PartnersPage />} />
+          <Route path="/why-kiani" element={<WhyKianiPage />} />
+          <Route path="/earnings" element={<EarningsPage />} />
+          <Route path="/how-it-works" element={<ProcessPage />} />
+          <Route path="/success-stories" element={<TestimonialsPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
