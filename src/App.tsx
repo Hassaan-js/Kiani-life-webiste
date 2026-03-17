@@ -11,6 +11,10 @@ import CareerGrowthPage from "./pages/CareerGrowthPage.tsx";
 import LeadsPage from "./pages/LeadsPage.tsx";
 import BonusesPage from "./pages/BonusesPage.tsx";
 import PartnersPage from "./pages/PartnersPage.tsx";
+import WhyKianiPage from "./pages/WhyKianiPage.tsx";
+import EarningsPage from "./pages/EarningsPage.tsx";
+import ProcessPage from "./pages/ProcessPage.tsx";
+import TestimonialsPage from "./pages/TestimonialsPage.tsx";
 
 const queryClient = new QueryClient();
 
