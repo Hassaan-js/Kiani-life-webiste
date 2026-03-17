@@ -32,6 +32,10 @@ const App = () => (
           <Route path="/leads" element={<LeadsPage />} />
           <Route path="/bonuses" element={<BonusesPage />} />
           <Route path="/partners" element={<PartnersPage />} />
+          <Route path="/why-kiani" element={<WhyKianiPage />} />
+          <Route path="/earnings" element={<EarningsPage />} />
+          <Route path="/how-it-works" element={<ProcessPage />} />
+          <Route path="/success-stories" element={<TestimonialsPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
