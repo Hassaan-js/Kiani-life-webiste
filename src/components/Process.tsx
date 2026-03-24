@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const steps = [
-  { num: "01", title: "Book a Call", desc: "Schedule a quick 15-minute discovery call with Moiz Kiani. We'll learn about your goals and see if you're a fit.", href: "#apply" },
+  { num: "01", title: "Book a Call", desc: "Schedule a quick 15-minute discovery call with Moiz Kiani. We'll learn about your goals and see if you're a fit.", href: "https://calendly.com/kiani-life-and-health/30min", external: true },
   { num: "02", title: "Get Licensed", desc: "We guide you through getting your insurance license — study materials, exam prep, and support included.", href: "/training" },
   { num: "03", title: "Start Earning", desc: "Hit the ground running with warm leads, a mentor by your side, and a clear path to your first commission check.", href: "/training#proof" },
 ];
