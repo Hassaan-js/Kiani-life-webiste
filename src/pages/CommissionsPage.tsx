@@ -40,7 +40,9 @@ const CommissionsPage = () => (
             The detailed commission grid and compensation structure is available to verified candidates. Book a discovery call to get full access.
           </p>
           <a
-            href="/#apply"
+            href="https://calendly.com/kiani-life-and-health/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-2.5 px-10 py-[16px] bg-gold text-primary-foreground text-[13px] font-semibold tracking-[0.08em] uppercase overflow-hidden"
           >
             <span className="relative z-10">Book a Call to View</span>

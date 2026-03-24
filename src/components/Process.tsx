@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const steps = [
-  { num: "01", title: "Book a Call", desc: "Schedule a quick 15-minute discovery call with Moiz Kiani. We'll learn about your goals and see if you're a fit.", href: "#apply" },
+  { num: "01", title: "Book a Call", desc: "Schedule a quick 15-minute discovery call with Moiz Kiani. We'll learn about your goals and see if you're a fit.", href: "https://calendly.com/kiani-life-and-health/30min", external: true },
   { num: "02", title: "Get Licensed", desc: "We guide you through getting your insurance license — study materials, exam prep, and support included.", href: "/training" },
   { num: "03", title: "Start Earning", desc: "Hit the ground running with warm leads, a mentor by your side, and a clear path to your first commission check.", href: "/training#proof" },
 ];
@@ -47,7 +47,7 @@ const Process = () => (
                 Learn More <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             ) : (
-              <a href={s.href} className="inline-flex items-center gap-1.5 text-[12px] font-semibold tracking-[0.08em] text-gold uppercase hover:text-gold-hi transition-colors">
+              <a href={s.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[12px] font-semibold tracking-[0.08em] text-gold uppercase hover:text-gold-hi transition-colors">
                 Get Started <ArrowRight className="w-3.5 h-3.5" />
               </a>
             )}

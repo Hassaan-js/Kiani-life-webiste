@@ -37,7 +37,7 @@ const Footer = () => (
             <li><Link to="/earnings" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Earning Potential</Link></li>
             <li><Link to="/how-it-works" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">How It Works</Link></li>
             <li><Link to="/success-stories" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Success Stories</Link></li>
-            <li><a href="/#apply" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Book a Call</a></li>
+            <li><a href="https://calendly.com/kiani-life-and-health/30min" target="_blank" rel="noopener noreferrer" className="text-sm font-light text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors">Book a Call</a></li>
           </ul>
         </div>
 

@@ -59,7 +59,9 @@ const Hero = () => (
 
         <div className="flex items-center gap-4 flex-wrap mb-16">
           <a
-            href="#apply"
+            href="https://calendly.com/kiani-life-and-health/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-2.5 px-10 py-[18px] bg-gold text-primary-foreground text-[13px] font-semibold tracking-[0.08em] uppercase overflow-hidden"
           >
             <Calendar className="relative z-10 w-4 h-4" />
