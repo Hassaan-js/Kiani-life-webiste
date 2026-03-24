@@ -52,7 +52,7 @@ const FAQ = () => {
               We know you're evaluating your options. Here are the most common questions from people just like you who are considering a career with Kiani.
             </p>
             <a
-              href="#apply"
+              href="/#apply"
               className="group relative inline-flex items-center gap-2.5 px-9 py-[15px] bg-gold text-primary-foreground text-[13px] font-semibold tracking-[0.08em] uppercase overflow-hidden"
             >
               <span className="relative z-10">Still Curious? Book a Call</span>
