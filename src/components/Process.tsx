@@ -47,7 +47,7 @@ const Process = () => (
                 Learn More <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             ) : (
-              <a href={s.href} className="inline-flex items-center gap-1.5 text-[12px] font-semibold tracking-[0.08em] text-gold uppercase hover:text-gold-hi transition-colors">
+              <a href={s.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[12px] font-semibold tracking-[0.08em] text-gold uppercase hover:text-gold-hi transition-colors">
                 Get Started <ArrowRight className="w-3.5 h-3.5" />
               </a>
             )}
