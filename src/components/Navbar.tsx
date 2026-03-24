@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
-  { label: "Why Kiani", href: "/why-kiani", isHash: false },
+  { label: "Why Us", href: "/why-kiani", isHash: false },
   { label: "Earnings", href: "/earnings", isHash: false },
   { label: "How It Works", href: "/how-it-works", isHash: false },
   { label: "Success Stories", href: "/success-stories", isHash: false },

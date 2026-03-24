@@ -58,7 +58,7 @@ const WhyKiani = () => (
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.5 }}
       >
-        <span className="eyebrow block mb-3.5">Why Join Kiani</span>
+        <span className="eyebrow block mb-3.5">Why Us</span>
         <h2 className="d2 text-t1 mb-4">Everything You Need to <span className="gold-italic">Win Big</span></h2>
         <p className="text-base font-light text-t2 leading-relaxed max-w-[520px]">
           We built the system. You bring the ambition. No degree required, no experience needed — just the drive to build something real.
