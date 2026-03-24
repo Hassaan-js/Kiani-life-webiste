@@ -46,7 +46,9 @@ const Earnings = () => (
           </div>
 
           <a
-            href="#apply"
+            href="https://calendly.com/kiani-life-and-health/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-2.5 px-9 py-[15px] bg-gold text-primary-foreground text-[13px] font-semibold tracking-[0.08em] uppercase overflow-hidden"
           >
             <span className="relative z-10">See If You Qualify</span>

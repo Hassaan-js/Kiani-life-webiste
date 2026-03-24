@@ -21,7 +21,9 @@ const CTASection = () => (
 
         <div className="flex flex-col sm:flex-row gap-3.5 items-center justify-center">
           <a
-            href="#apply"
+            href="https://calendly.com/kiani-life-and-health/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-2.5 px-10 py-[18px] bg-ink text-gold text-[13px] font-semibold tracking-[0.1em] uppercase overflow-hidden whitespace-nowrap"
           >
             <span className="relative z-10">Book My Discovery Call</span>

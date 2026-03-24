@@ -45,7 +45,7 @@ const BonusesPage = () => (
           ))}
         </div>
 
-        <a href="/#apply" className="group relative inline-flex items-center gap-2.5 px-10 py-[16px] bg-gold text-primary-foreground text-[13px] font-semibold tracking-[0.08em] uppercase overflow-hidden">
+        <a href="https://calendly.com/kiani-life-and-health/30min" target="_blank" rel="noopener noreferrer" className="group relative inline-flex items-center gap-2.5 px-10 py-[16px] bg-gold text-primary-foreground text-[13px] font-semibold tracking-[0.08em] uppercase overflow-hidden">
           <span className="relative z-10">Join & Start Earning Bonuses</span>
           <ArrowRight className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           <span className="absolute inset-0 bg-[hsl(var(--gold-hi))] -translate-x-full transition-transform duration-400 group-hover:translate-x-0" />
