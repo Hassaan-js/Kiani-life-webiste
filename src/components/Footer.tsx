@@ -25,7 +25,7 @@ const Footer = () => (
               <Mail className="w-4 h-4 flex-shrink-0" /> careers@kianilifeandhealth.com
             </a>
             <span className="flex items-center gap-2.5 text-[13px] text-t3">
-              <MapPin className="w-4 h-4 flex-shrink-0" /> 1235 Providence Blvd, Deltona, FL
+              <MapPin className="w-4 h-4 flex-shrink-0" /> 2520 NW 97th Ave #120, Doral, FL 33172
             </span>
           </div>
         </div>
